@@ -1,0 +1,66 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body,
+button,
+input,
+select,
+textarea {
+	/* "\5B8B\4F53" 就是宋体的意思 这样浏览器兼容性比较好 */
+	font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+	scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+address, cite, dfn, em, var {
+	font-style: normal;
+}
+code, kbd, pre, samp {
+	font-family: couriernew, courier, monospace;
+}
+small {
+	font-size: 12px;
+}
+li {
+	list-style: none;
+}
+a {
+	color: inherit;/* 继承父类样式 */
+	text-decoration: none;
+}
+sup {
+	vertical-align: text-top;
+}
+sub {
+	vertical-align: text-bottom;
+}
+legend {
+	color: #000;
+}
+fieldset, img {
+	border: 0;
+}
+button, input, select, textarea {
+	font-size: 100%;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+em, i {
+    font-style: normal;
+}
+/* 清除浮动 */
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0;
+}
+.clearfix {
+    *zoom: 1;
+}

@@ -1,0 +1,774 @@
+/************************************************ 1.公共样式 **********************************************/
+body {
+	font-size: 12px;
+	color: #333;
+}
+.containner {
+	width: 1206px;
+	/* margin: 0 auto; */
+	margin-left: auto;
+	margin-right: auto;
+}
+/************************************************ 2.顶部代码css样式 ****************************************/
+.page-top {
+	height: 38px;
+	background-color: #323232;
+}
+/************************************************ 2.1顶部左侧css样式 ***************************************/
+.page-top .top-left {
+	color: #a2a2a2;
+	line-height: 38px;
+	float: left;
+}
+.page-top .top-left li {
+	float: left;
+	padding: 0 2.5px;
+	display: inline-block;
+}
+.page-top .top-left li span {
+	color: #3f3f3f;
+}
+.page-top .top-left li:hover a {
+	color: #fff;
+}
+/********************************************* 2.1.1顶部左侧downbload模块css样式 *********************************/
+.page-top .top-left .download {
+	position: relative;
+	z-index: 1000;
+}
+.page-top .top-left .download b {
+	width: 20px;
+	height: 11px;
+	position: absolute;
+	background-image: url(../img/others/三角形.png);
+	left: 50%;
+	margin-left: -10px;
+	top: 28px;
+	display: none;
+}
+.page-top .top-left .download .down-box {
+	width: 126px;
+	height: 0;
+	overflow: hidden;
+	background-color: #fff;
+	position: absolute;
+	left: 50%;
+	margin-left: -63px;
+	top: 38;
+	box-shadow: rgb(170, 170, 170) 0px 1px 5px;
+	text-align: center;
+	transition: height 0.3s ease;
+}
+.page-top .top-left .down-box img {
+	width: 88px;
+	height: 88px;
+	display: block;
+	margin: 20px auto 0;
+}
+.page-top .top-left li.download i {
+	font-style: normal;
+	color: #323232;
+	font-size: 13px;
+}
+.page-top .top-left li.download:hover b {
+	display: block;
+}
+.page-top .top-left li.download:hover .down-box {
+	height: 145px;
+}
+/******************************************** 2.2顶部右侧css样式 ********************************************/
+.page-top .top-right {
+	float: right;
+}
+/******************************************** 2.2.2顶部右侧模块2:userinfo>用户_样式 ********************************/
+.page-top .top-right .userinfo {
+	float: right;
+	margin-right: 20px;
+}
+.page-top .top-right .userinfo .user {
+	width: 120px;
+	display: inline-block;
+	position: relative;
+	z-index: 1000;
+}
+.page-top .top-right .userinfo .user .title {
+	position: relative;
+	/* a标签转为块元素 */
+	display: block;
+	line-height: 38.4px;
+	text-align: center;
+	color: #a2a2a2;
+	z-index: 5;
+}
+.page-top .top-right .userinfo .user .title i {
+	font-size: 10px;
+	position: relative;
+    left: 5px;
+}
+.page-top .top-right .userinfo .user ul {
+	position: absolute;
+	width: 120px;
+	height: 0;
+	overflow: hidden;
+	left: 0;
+	top: 38px;
+	background-color: #fff;
+	transition: all 0.2s ease;
+}
+.page-top .top-right .userinfo .user ul li {
+	padding: 2px 0;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.page-top .top-right .userinfo .user ul li a {
+	display: block;
+}
+.page-top .top-right .userinfo .user:hover .title {
+	color: #ff6700;
+}
+.page-top .top-right .userinfo .user:hover {
+	background-color: #fff;
+}
+.page-top .top-right .userinfo .user:hover ul {
+	height: 170px;
+	box-shadow: 0px 5px 8px rgb(0, 0, 0, 0.15);
+}
+.page-top .top-right .userinfo .user ul li:hover {
+	background-color: #f5f5f5;
+	color: #ff6700;
+}
+/******************************************** 2.2.3顶部右侧模块3:userinfo>消息通知、我的订单_样式 ********************************/
+.page-top .top-right .userinfo .link {
+	line-height: 38px;
+	color: #a2a2a2;
+}
+.page-top .top-right .userinfo span {
+	padding: 0 3px;
+	color: #3f3f3f;
+}
+.page-top .top-right .userinfo .link:hover {
+	color: #fff;
+}
+/******************************************** 2.3顶部右侧购物车模块css样式 *********************************/
+.page-top .top-right .cart-box {
+	float: right;
+	position: relative;
+	z-index: 1000;
+}
+.page-top .top-right .cart-box .title {
+	/* 将a标签转换为块元素 */
+	display: block;
+	width: 118px;
+	height: 38px;
+	background-color: #424242;
+	text-align: center;
+	line-height: 38px;
+	color: #a2a2a2;
+	position: relative;
+	z-index: 5;/* 处理衔接部分更加融合 */
+}
+.page-top .top-right .cart-box .pop {
+	width: 350px;
+	height: 0px;
+	overflow: hidden;
+	position: absolute;
+	top: 38px;
+	right: 0;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+	background-color: #fff;
+	transition: all 0.3s ease;
+}
+.page-top .top-right .cart-box:hover .pop {
+	height: 450px;
+}
+.page-top .top-right .cart-box:hover .title {
+	color: #FF6700;
+	background-color: #f5f5f5;
+}
+/******************************************** 2.3.1顶部右侧购物车模块已经选购商品css样式 *********************************/
+.page-top .top-right .cart-box .pop .list {
+	padding: 15px 15px 0;
+}
+.page-top .top-right .cart-box .pop .list .list-item {
+	height: 91px;
+	padding: 10px 0;
+	border-bottom: 1px solid #e0e0e0;
+	line-height: 85px;
+}
+.page-top .top-right .cart-box .pop .list .list-item:last-child {
+	border: none;
+}
+.page-top .top-right .cart-box .pop .list .list-item .detail {
+	float: left;
+	height: 70px;
+	line-height: 80px;
+}
+.page-top .top-right .cart-box .pop .list .list-item .detail img,
+.page-top .top-right .cart-box .pop .list .list-item .detail span {
+	float: left;
+}
+.page-top .top-right .cart-box .pop .list .list-item .detail span {
+	width: 140px;
+	white-space: nowrap;/* 控制文本不会换行 */
+	overflow: hidden;/* 内容溢出部分隐藏 */
+	text-overflow: ellipsis;/* 文本溢出部分以省略号形式显示 */
+	margin-left: 5px;
+	font-size: 12px;
+}
+.page-top .top-right .cart-box .pop .list .list-item .detail img {
+	height: 80px;
+	width: 80px;
+}
+.page-top .top-right .cart-box .pop .list .list-item .price {
+	font-size: 12px;
+	float: right;
+	line-height: 80px;
+}
+.page-top .top-right .cart-box .pop .list .list-item .price i,
+.page-top .top-right .cart-box .pop .list .list-item .price span {
+	float: right;
+}
+.page-top .top-right .cart-box .pop .list .list-item .price i {
+	opacity: 0;
+	margin-left: 10px;
+	font-size: 12px;
+	cursor: pointer;
+	color: #aaa;
+	transition: opacity 0.2s ease;
+}
+.page-top .top-right .cart-box .pop .list .list-item:hover i {
+	opacity: 1;
+}
+.page-top .top-right .cart-box .pop .list .list-item .detail span:hover {
+	color: #ff6700;
+}
+.page-top .top-right .cart-box .pop .list .list-item .price i:hover {
+	color: #333;
+}
+/******************************************** 2.3.2购物车模块底部总金额css样式 *********************************/
+.page-top .top-right .cart-box .pop .total {
+	background-color: #fafafa;
+	padding: 15px 20px;
+/****************** problem6:overfloat属性详细了解，浮动的元素没有高度，高度塌陷4种解决方法 ******************/
+	height: 70px;
+}
+.page-top .top-right .cart-box .pop .total .btn {
+	display: block;
+	width: 132px;
+	height: 40px;
+	background-color: #FF6700;
+	color: #fff;
+	text-align: center;
+	line-height: 40px;
+	float: right;
+	margin-top: 15px;
+}
+.page-top .top-right .cart-box .pop .total .sum {
+	float: left;
+	margin: 12px 5px 0;
+}
+.page-top .top-right .cart-box .pop .total .sum span {
+	color: #7e7e7e;
+}
+.page-top .top-right .cart-box .pop .total .sum h3 {
+	font-size: 20px;
+	color: #ff6700;
+	font-weight: 500;
+}
+/************************************************ 3.导航代码css样式 ****************************************/
+.page-nav {
+	height: 96px;
+	position: relative;/* pop通栏框弹出定位参照 */
+	background-color: #eee;
+	z-index: 10;
+}
+/************************************************ 3.1logo部分css样式 ****************************************/
+.page-nav .logo {
+	display: block;
+	width:99px;
+	height: 96px;
+	float: left;
+	background: url(../img/icons/logo-mi2.png) center center no-repeat;
+	background-size: 54px;
+}
+/************************************************ 3.2导航nav部分css样式 ****************************************/
+.page-nav .nav .nav-item {
+	float: left;
+	margin-top: 24px;
+	padding: 12px 2px 0 16px;
+	height: 60px;
+}
+.page-nav .nav .nav-item .title {
+	font-size: 16px;
+	color: #666;
+	transition: color 0.15s linear;
+}
+.page-nav .nav .nav-item:hover .title {
+	color: #FF6700;
+}
+/************************************************ 3.2.1其他分类导航部分css样式 ****************************************/
+.page-nav .nav .bgc {
+	height: 96px;
+	float: left;
+}
+.page-nav .nav .nav-item .pop {
+	position: absolute;
+	width: 100%;
+	height: 230px;
+	left: 0px;
+	top: 96px;
+	background-color: #fff;
+	box-shadow: 0 3px 4px rgb(0,0,0,0.18);
+	border-top: 1px solid #e0e0e0;
+	z-index: 1000;
+	display: none;
+}
+/* transition: height 0.3s linear; */
+.page-nav .nav .nav-item:hover .pop {
+	display: block;
+}
+.page-nav .nav .nav-item .pop .down-ul .down-li {
+	width: 241px;
+	float: left;
+	padding-top: 30px;
+	text-align: center;
+	position: relative;
+}
+.page-nav .nav .nav-item .pop .down-ul .down-li .pic img {
+	width: 160px;
+	height: 110px;
+}
+.page-nav .nav .nav-item .pop .down-ul .down-li .name {
+	font-weight: normal;
+	font-size: 13px;
+	margin-top: 20px;
+}
+.page-nav .nav .nav-item .pop .down-ul .down-li .price {
+	color: #FF6700;
+	margin-top: 5px;
+}
+/****************** problem7:为什么i标签为行内元素可以直接设置宽高 ******************/
+.page-nav .nav .nav-item .pop .down-ul .down-li i {
+	background-color: #e0e0e0;
+	width: 1px;
+	height: 100px;
+	position: absolute;
+	right: 0;
+	top: 36px;
+}
+.page-nav .nav .nav-item .pop .down-ul .down-li:last-child i {
+	display: none;
+}
+/************************************************ 3.2.2全部分类导航部分css样式 ****************************************/
+#page-all-nav {
+	/* visibility: hidden; */
+	position: relative;
+}
+.page-nav .nav #page-all-nav .slider-nav {
+	position: absolute;
+	width: 232px;
+	height: 418px;
+	border: 1px solid #FF6700;
+	background-color: #fff;
+	right: -21px;
+	top: 72px;
+	padding: 20px 0;
+	z-index: 500;
+}
+.page-nav .nav #page-all-nav .slider-ul .slider-li {
+	line-height: 42px;
+}
+.page-nav .nav #page-all-nav .slider-ul .slider-li .name {
+	display: block;
+	font-size: 13px;
+	padding: 0 24px 0 30px;
+}
+.page-nav .nav #page-all-nav .slider-ul .slider-li .name span{
+	margin-right: 5px;
+}
+.page-nav .nav #page-all-nav .slider-ul .slider-li .name i {
+	float: right;
+}
+.page-nav .nav #page-all-nav .slider-ul .slider-li:hover .name {
+	background-color: #FF6700;
+	color: #fff;
+}
+/************************************************ 3.2.2.1全部分类导航内部嵌套侧弹菜单css样式 ****************************************/
+.page-nav .nav #page-all-nav .slider-ul .slider-li .slider-pop {
+	position: absolute;
+	border: 1px solid #E0E0E0;
+	border-left: none;
+	width: 800px;
+	height: 458px;
+	left: 233px;
+	top: 0px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+	background-color: #fff;
+	display: none;
+}
+.page-nav .nav #page-all-nav .slider-ul .slider-li .slider-pop .pop-li {
+	float: left;
+	width: 223px;
+	height: 56px;
+	overflow: hidden;
+	padding-left: 24px;
+	margin-bottom: 10px;
+	padding-top: 20px;
+}
+.page-nav .nav #page-all-nav .slider-ul .slider-li .slider-pop .pop-li img {
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin-right: 16px;
+}
+.page-nav .nav #page-all-nav .slider-ul .slider-li .slider-pop .pop-li:hover p {
+	color: #FF6700;
+}
+.page-nav .nav #page-all-nav .slider-ul .slider-li:hover .slider-pop {
+	display: block;
+}
+/************************************************ 3.3搜索部分css样式 ****************************************/
+.page-nav .search {
+	float: right;
+	position: relative;
+	margin-top: 24px;
+}
+/************************************************ 3.3.1搜索query部分css样式 ****************************************/
+.page-nav .search .query {
+	width: 227px;
+	height: 48px;
+	border: 1px solid #e0e0e0;
+	border-right: none;
+	outline: none;/* 设置元素周围的轮廓线 */
+	line-height: 48;
+	padding-left: 8px;
+	float: left;
+}
+/************************************************ 3.3.2搜索tags部分css样式 ****************************************/
+.page-nav .search .tags {
+	position: absolute;
+	top: 17px;
+	right: 58px;
+	width: 130px;
+	text-align: right;
+}
+.page-nav .search .tags span {
+	line-height: 18px;
+	padding: 0 5px;
+	background-color: #eee;
+	font-size: 12px;
+	cursor: pointer;
+}
+.page-nav .search .tags span:hover {
+	background-color: #FF6700;
+	color: #fff;
+}
+/************************************************ 3.3.3搜索btn部分css样式 ****************************************/
+.page-nav .search .btn {
+	width: 50px;
+	height: 50px;
+	border: 1px solid #e0e0e0;
+	float: left;
+	background: #fff url(../img/icons/search.png) no-repeat center center;
+	background-size: 16px;
+	cursor: pointer;
+}
+.page-nav .search:hover .query,
+.page-nav .search:hover .btn {
+	border-color: #b0b0b0;
+}
+.page-nav .search .btn:hover {
+	background-color: #FF6700;
+	background-image: url(../img/icons/search-on.png);
+	border-color: #ff6700;
+}
+/************************************************ 3.3.4搜索下拉hot部分css样式 ****************************************/
+.page-nav .search .hot {
+	position: absolute;
+	top: 50px;
+	width: 234px;
+	border: 1px solid #ff6700;
+	border-top: none;
+	display: none;
+}
+.page-nav .search .hot li {
+	line-height: 30px;
+	background-color: #fff;
+}
+.page-nav .search .hot li a {
+	display: block;
+	padding: 0 15px;
+	color: #535353;
+}
+.page-nav .search .hot li:hover {
+	background-color: #fafafa;
+}
+.page-nav .search .hot li i {
+	float: right;
+	font-style: normal;
+	color: #b0b0b0;
+}
+/************************************************ 4.页尾代码css样式 ****************************************/
+/************************************************ 4.1页尾service部分css代码 ****************************************/
+.page-footer .service {
+	overflow: hidden;
+	margin: 30px auto;
+}
+.page-footer .service li {
+	width: 240px;
+	border-right: 1px solid #b0b0b0;
+	line-height: 25px;
+	float: left;
+	font-size: 16px;
+	text-align: center;
+	color: #616161;
+}
+.page-footer .service li:last-child {
+	border-right: none;
+}
+.page-footer .service li a i {
+	font-size: 22px;
+	margin-right: 5px;
+	position: relative;
+	top: 2px;
+}
+.page-footer .service li a {
+	transition: color 0.2s linear;
+}
+.page-footer .service li a:hover {
+	color: #FF6700;
+}
+/************************************************ 4.2页尾nav部分css代码 ****************************************/
+.page-footer .nav {
+	border-top: 1px solid #b0b0b0;
+	height: 170px;
+	padding: 40px 0;
+}
+/************************************************ 4.2.1页尾nav_right部分css代码 ****************************************/
+.page-footer .nav .nav-right {
+	width: 240px;
+	height: 110px;
+	border-left: 1px solid #b0b0b0;
+	text-align: center;
+	float: right;
+}
+.page-footer .nav .nav-right h3 {
+	font-size: 22px;
+	font-weight: normal;
+	color: #FF6700;
+	margin-bottom: 5px;
+}
+.page-footer .nav .nav-right h4 {
+	font: 12px;
+	font-weight: normal;
+	color: 616161;
+	margin-bottom: 5px;
+}
+.page-footer .nav .nav-right .agency {
+	display: block;
+	width: 120px;
+	height: 30px;
+	margin: 0 auto;
+	line-height: 30px;
+	border: 1px solid #FF6700;
+	color: #FF6700;
+	font-size: 12px;
+	transition: background-color 0.2s linear;
+	transition: color 0.2s linear;
+}
+.page-footer .nav .nav-right .agency:hover {
+	background-color: #FF6700;
+	color: #fff;
+}
+.page-footer .nav .nav-right .agency i {
+	margin-right: 5px;
+	font-size: 10px;
+}
+/***************************************** 关注小米部分 *********************************/
+.page-footer .nav .nav-right .follow {
+	font-size: 12px;
+	margin-top: 10px;
+	color: #616161;
+	position: relative;
+}
+.page-footer .nav .nav-right .follow i {
+	margin-left: 3px;
+	position: relative;
+	top: 2px;
+	font-size: 25px;
+}
+.page-footer .nav .nav-right .follow i:hover {
+	color: #FF6700;
+}
+.page-footer .nav .nav-right .follow .weixin:hover .pop {
+	display: block;
+}
+.page-footer .nav .nav-right .follow .weixin .pop {
+	width: 120px;
+	position: absolute;
+	top: 28px;
+	right: 10px;
+	display: none;
+}
+.page-footer .nav .nav-right .follow .weixin .pop img {
+	width: 100%;
+}
+/************************************************ 4.2.2页尾nav_left部分css代码 ****************************************/
+.page-footer .nav .nav-left {
+	float: left;
+	width: 964px;
+}
+.page-footer .nav .nav-left dl {
+	float: left;
+	width: 160px;
+}
+.page-footer .nav .nav-left dl dt {
+	margin-bottom: 26px;
+}
+.page-footer .nav .nav-left dl dd {
+	margin-top: 10px;
+}
+.page-footer .nav .nav-left dl dd:hover {
+	color: #FF6700;
+}
+/************************************************ 4.3页尾bottom部分css代码 ****************************************/
+.page-footer .bottom {
+	height: 250px;
+	background-color: #f5f5f5;
+	padding-top: 40px;
+}
+.bottom .logo {
+	display: block;
+	width: 54px;
+	height: 100px;
+	background: url(../img/icons/logo-mi2.png) center top no-repeat;
+	background-size: 54px;
+	margin-right: 10px;
+	float: left;
+}
+.bottom .site-info {
+	width: 1206px;
+	height: 107px;
+	font-size: 12px;
+	line-height: 18px;
+	color: #b0b0b0;
+}
+.bottom .site-info .sites {
+	color: #757575;
+}
+.bottom .site-info .sites a, span {
+	margin-left: 2px;
+}
+.bottom .site-info a:hover {
+	color: #FF6700;
+}
+.bottom .info-links {
+	height: 1206px;
+	height: 28px;
+	padding-left: 67px;
+	margin: 4px 0 15px;
+}
+.bottom .info-links img {
+	width: 85px;
+	height: 28px;
+	cursor: pointer;
+}
+/******************************************************** 5侧边栏样式 ********************************************************************/
+.page-slider {
+	position: fixed;
+	width: 82px;
+	right: 0;
+	bottom: 60px;
+	z-index: 1000;
+}
+.page-slider li {
+	height: 92px;
+	width: 82px;
+	border: 1px solid #f5f5f5;
+	text-align: center;
+	background-color: #fff;
+	position: relative;
+}
+.page-slider li.last {
+	margin-top: 14px;
+}
+.page-slider li i.icon {
+	display: block;
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/icons/精灵图.png);
+	background-size: 180px;
+	margin: 24px auto;
+}
+.page-slider li i.shouji {
+	background-position: -30px -90px;
+}
+.page-slider li i.zhongxin {
+	background-position: -30px -60px;
+}
+.page-slider li i.wufu {
+	background-position: -30px -120px;
+}
+.page-slider li i.kefu {
+	background-position: -30px 0px;
+}
+.page-slider li i.gouwuche {
+	background-position: -30px -30px;
+}
+.page-slider li i.fanhuidingbu {
+	background-position: -30px -150px;
+}
+.page-slider li:hover i.shouji {
+	background-position: 0px -90px;
+}
+.page-slider li:hover i.zhongxin {
+	background-position: 0px -60px;
+}
+.page-slider li:hover i.wufu {
+	background-position: 0px -120px;
+}
+.page-slider li:hover i.kefu {
+	background-position: 0px 0px;
+}
+.page-slider li:hover i.gouwuche {
+	background-position: 0px -30px;
+}
+.page-slider li:hover i.fanhuidingbu {
+	background-position: 0px -150px;
+}
+.page-slider li span {
+	position: relative;
+	top: -20px;
+	color: #757575;
+}
+.page-slider li:hover span {
+	color: #FF6700;
+}
+/******************************************************** 5.1侧边栏弹出css样式 ********************************************************************/
+.page-slider li .pop {
+	width: 130px;
+	height: 175px;
+	/* 注意:此处的visibility属性并不多余! */
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	right: 88px;
+	top: 0;
+	text-align: center;
+	background-color: #fff;
+	transition: all 0.1s linear;
+}
+.page-slider li .pop img {
+	width: 95px;
+	margin: 24px auto 6px;
+}
+.page-slider li:hover .pop {
+	display: block;
+	visibility: visible;
+	opacity: 1;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+
+

@@ -1,0 +1,539 @@
+/*******************************************1.首页样式：全部分类导航内部嵌套侧弹菜单css样式**********************************************************/
+.page-nav .nav #page-all-nav .slider-nav {
+	background-color: rgba(105,101,101,0.6);
+	width: 234px;
+	height: 420px;
+	border: none;
+}
+.page-nav .nav #page-all-nav .slider-nav .slider-ul .slider-li .name {
+	color: #fff;
+}
+.page-nav .nav #page-all-nav .slider-nav {
+	visibility: visible;
+}
+/*******************************************2.首页样式：轮播图**********************************************************/
+/*******************************************2.1轮播图banner样式**********************************************************/
+.idx-banner {
+	height: 460px;
+	position: relative;
+	overflow: hidden;
+}
+.idx-banner .banner-list {
+	width: 20000px;
+}
+.idx-banner .banner-list li {
+	width: 1206px;
+	height: 460px;
+	float: left;
+}
+.idx-banner .banner-list li a {
+	width: 972px;
+	height: 460px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.idx-banner .banner-list li img {
+	width: 1206px;
+	height: 460px;
+}
+/*******************************************2.2轮播图banne_btn样式**********************************************************/
+.idx-banner .btn {
+	position: absolute;
+	width: 40px;
+	height: 70px;
+	text-align: center;
+	line-height: 70px;
+	font-size: 25px;
+	color: #666666;
+	transition: color 0.2s linear;
+}
+.idx-banner .prev {
+	left: 234px;
+	top: 50%;
+	margin-top: -35px;
+}
+.idx-banner .next {
+	right: 0;
+	top: 50%;
+	margin-top: -35px;
+}
+.idx-banner .btn:hover {
+	background-color: rgba(0, 0, 0, 0.6);
+	color: #fff;
+}
+/*******************************************2.3轮播图banne_圆点导航css样式**********************************************************/
+.idx-banner .circle {
+	position: absolute;
+	bottom: 30px;
+	right: 0;
+	padding-right: 35px;
+}
+.idx-banner .circle a {
+	display: inline-block;
+}
+.idx-banner .circle a span {
+	display: inline-block;
+	margin: 0 5px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	border: 3px solid rgba(255,255,255,0.3);
+	background-color: rgba(0, 0, 0, 0.4);
+	transition: color 0.2s linear;
+	transition: background-color 0.2s linear;
+}
+.idx-banner .circle a span.current {
+	background-color: rgba(255,255,255,0.4);
+	border-color: rgba(0, 0, 0, 0.4);
+}
+/*******************************************3.首页样式：菜单和广告(开始页面布局练习)**********************************************************/
+/*******************************************3.1菜单menucss样式**********************************************************/
+.idx-menu-adv {
+	height: 170px;
+	margin-top: 20px;
+	margin-bottom: 35px;
+}
+.idx-menu-adv .menu {
+	width: 214px;
+	height: 145px;
+	background-color: #5f5750;
+	float: left;
+	padding: 10px;
+}
+.idx-menu-adv .menu li {
+	width: 71px;
+	height: 71px;
+	float: left;
+	padding-top: 10px;
+	text-align: center;
+	color: #c8c6c3;
+	position: relative;
+}
+.idx-menu-adv .menu li i {
+	font-size: 20px;
+}
+.idx-menu-adv .menu li span {
+	display: block;
+	margin-top: 10px;
+	font-size: 12px;
+}
+.idx-menu-adv .menu li.bb:before {
+	content: "";
+	display: block;
+	width: 61px;
+	height: 1px;
+	background-color: #655d56;
+	position: absolute;
+	left: 5px;
+	bottom: 0px;
+}
+.idx-menu-adv .menu li.br:after {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 61px;
+	background-color: #655d56;
+	position: absolute;
+	right: 0px;
+	top: 5px;
+}
+.idx-menu-adv .menu li:hover {
+	color: #fff;
+}
+/*******************************************3.2广告区域图片css样式**********************************************************/
+.idx-menu-adv .pic {
+	display: block;
+	height: 304px;
+	height: 165px;
+	margin-left: 17px;
+	float: left;
+	transition: box-shadow 0.2s linear;
+}
+.idx-menu-adv .pic:hover {
+	box-shadow: 0 15px 30px rgb(0,0,0,0.1);
+}
+.idx-menu-adv .pic img {
+	display: block;
+	height: 304px;
+	height: 165px;
+}
+/*******************************************4.首页样式：广告图**********************************************************/
+.idx-adv img {
+	/* img为行内块元素,不能将a标签撑起 */
+	display: block;
+	width: 100%;
+	margin-top: 40px;
+}
+/*******************************************5.首页样式：主页主内容区**********************************************************/
+.idx-containner {
+	background-color: #f5f5f5;
+	padding-top: 20px;
+}
+/*******************************************5.1首页idx-title公共标题css样式**********************************************************/
+.idx-containner .idx-title {
+	overflow: hidden;/* 处理高度塌陷 */
+	margin: 50px 0 10px;
+	/* 一个容器的第一个子元素的margin-top会转移给父元素的margin-top */
+	/* 解决方案:1.为父元素添加overfloat:hidden;2.第一个子元素的margin-top变为父元素的padding-bottom;3.为父元素添加border属性 */
+}
+.idx-containner .idx-title .title {
+	font-size: 22px;
+	line-height: 60px;
+	color: #666;
+}
+.idx-containner .idx-title .more {
+	float: right;
+	font-size: 18px;
+	color: #666;
+	/* 利用相对定位:相对原来的位置向下10px定位 */
+	position: relative;
+	top: 25px;
+	transition: color 0.2s linear;
+}
+.idx-containner .idx-title .more:hover {
+	color: #FF6700;
+}
+/*******************************************5.2首页idx-phone区域css样式**********************************************************/
+.idx-containner .idx-box {
+/****************** problem11:复习浮动造成高度塌陷的4种解决方案，并应用更优方案解决******************/
+	height: 615px;
+/****************** problem12:复习浮动相关内容clear:both;的作用 ******************/
+	clear: both;
+	margin-bottom: 50px;
+}
+.idx-containner .idx-box .col-5 {
+	width: 229px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+	float: left;
+}
+/*******************************************5.2.1首页idx-phone左侧adv-box区域css样式**********************************************************/
+.idx-containner .idx-box .adv-box {
+	height: 615px;
+	margin-left: 0;
+	float: left;
+}
+/* 广告区为单张图片 */
+.idx-containner .idx-box .adv-box .one {
+	display: block;
+	width: 100%;
+	height: 615px;
+	transition: all .2s linear;
+	
+}
+.idx-containner .idx-box .adv-box .one img {
+	width: 100%;
+	height: 615px;
+}
+/* 广告区为多张图片 */
+.idx-containner .idx-box .adv-box .two {
+	display: block;
+	width: 100%;
+	height: 300px;
+	margin-bottom: 15px;
+	transition: all .2s linear;
+}
+.idx-containner .idx-box .adv-box .two img {
+	width: 100%;
+	height: 300px;
+}
+.idx-containner .idx-box .adv-box .one:hover,
+.idx-containner .idx-box .adv-box .two:hover {
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+	transform: translateY(-3px);
+}
+/*******************************************5.2.2首页idx-phone右侧good-box区域css样式**********************************************************/
+.idx-containner .idx-box .good-box {
+	width: 976px;
+	float: right;
+}
+.idx-containner .idx-box .good-box .good-item {
+	background-color: #fff;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	transition: all 0.2s linear;
+}
+.idx-containner .idx-box .good-box .good-item:hover {
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+	transform: translateY(-3px);
+}
+.idx-containner .idx-box .good-box .good-item .tags {
+	width: 64px;
+	height: 20px;
+	position: absolute;
+	left: 50%;
+	margin-left: -32px;
+	top: 0px;
+	color: #fff;
+	line-height: 20px;
+}
+.idx-containner .idx-box .good-box .good-item .tags.new {
+	background-color: #83c44e;
+}
+.idx-containner .idx-box .good-box .good-item .tags.disc {
+	background-color: #e53935;
+}
+.idx-containner .idx-box .good-box .good-item img {
+	/* 注意:item-box内部的图片不是100%填充！ */
+	display: block;
+	width: 160px;
+	height: 160px;
+	margin: 20px auto;
+}
+.idx-containner .idx-box .good-box .good-item .name,
+.idx-containner .idx-box .good-box .good-item .desc {
+	margin: 0 auto;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.idx-containner .idx-box .good-box .good-item .name {
+	width: 200px;
+	margin-bottom: 10px;
+}
+.idx-containner .idx-box .good-box .good-item .desc {
+	width: 210px;
+	color: #b0b0b0;
+	font-weight: normal;
+}
+.idx-containner .idx-box .good-box .good-item .price {
+	margin-top: 20px;
+}
+.idx-containner .idx-box .good-box .good-item .price span {
+	color: #FF6700;
+}
+.idx-containner .idx-box .good-box .good-item .price i {
+	font-style: normal;
+	text-decoration: line-through;
+	margin-left: 5px;
+	color: #b0b0b0;
+}
+/*******************************************5.3首页家电区域css样式**********************************************************/
+/*******************************************5.3.1首页家电区域标题css样式**********************************************************/
+.idx-containner .idx-title .list {
+	width: 400px;
+	float: right;
+	position: relative;
+	top: 20px;
+	text-align: right;
+	font-size: 14px;
+}
+.idx-containner .idx-title .list li {
+	display: inline-block;
+	margin-left: 26px;
+	padding-bottom: 3px;
+}
+.idx-containner .idx-title .list li.active,
+.idx-containner .idx-title .list li:hover {
+	color: #FF6700;
+	border-bottom: 2px solid #FF6700;
+}
+/*******************************************5.3.2首页家电区域右侧css样式**********************************************************/
+.idx-containner .idx-box .good-box .last-item {
+	height: 300px;
+}
+.idx-containner .idx-box .good-box .last-item .last-item-top,
+.idx-containner .idx-box .good-box .last-item .last-item-more {
+	height: 143px;
+	margin-bottom: 14px;
+	position: relative;
+	background-color: #fff;
+	transition: all 0.2s linear;
+}
+.idx-containner .idx-box .good-box .last-item .last-item-top .pic,
+.idx-containner .idx-box .good-box .last-item .last-item-more .more {
+	display: block;
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 40%;
+	right: 30px;
+	margin-top: -30px;
+	/* logo的盒内处理 */
+	text-align: center;
+	line-height: 80px;
+	font-size: 60px;
+}
+.idx-containner .idx-box .good-box .last-item .last-item-top .pic img {
+	display: block;
+	width: 80px;
+	height: 80px;
+}
+.idx-containner .idx-box .good-box .last-item .txt {
+	width: 100px;
+	height: 50px;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+.idx-containner .idx-box .good-box .last-item .txt .title {
+	margin-bottom: 5px;
+}
+.idx-containner .idx-box .good-box .last-item .last-item-top .txt .desc {
+	color: #FF6700;
+}
+.idx-containner .idx-box .good-box .last-item .last-item-more .more {
+	color: #ff6700;
+}
+/*******************************************5.3.3首页家电区域css其他添加样式**********************************************************/
+.idx-containner .idx-box .good-box .last-item .last-item-top:hover,
+.idx-containner .idx-box .good-box .last-item .last-item-more:hover {
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+	transform: translateY(-3px);
+}
+.idx-containner .idx-box .good-box .good-item .pop {
+	height: 56px;
+	background-color: #FF6700;
+	position: absolute;
+	left: 0;
+	bottom: -76px;
+	padding: 10px 25px;
+	transition: transform 0.2s ease;
+}
+.idx-containner .idx-box .good-box .good-item .pop h5 {
+	color: #fff;
+	margin-bottom: 4px;
+	/* 控制文字描述内容只显示两行 */
+	line-height: 18px;
+	height: 36px;
+	overflow: hidden;
+}
+.idx-containner .idx-box .good-box .good-item .pop p {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: rgba(255, 255, 255, 0.6);
+}
+.idx-containner .idx-box .good-box .good-item:hover .pop {
+	transform: translateY(-76px);
+}
+/*******************************************5.4首页视频区域css样式**********************************************************/
+/*******************************************5.4.1首页视频区域页面布局css样式**********************************************************/
+.idx-containner .idx-video {
+	height: 315px;
+}
+.idx-containner .idx-video .item {
+	width: 290px;
+	height: 285px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+	background-color: #fff;
+	float: left;
+	/* 内容格式控制 */
+	text-align: center;
+	line-height: 50px;
+	transition: all 0.2s linear;
+}
+.idx-containner .idx-video .item:hover {
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+	transform: translateY(-3px);
+}
+.idx-containner .idx-video .item-first {
+	margin-left: 0;
+}
+.idx-containner .idx-video .item .pic {
+	width: 100%;
+	position: relative;
+}
+.idx-containner .idx-video .item .pic:hover .play {
+	background-color: #FF6700;
+	border-color: #FF6700;
+}
+.idx-containner .idx-video .item .pic img {
+	width: 100%;
+}
+.idx-containner .idx-video .item .pic .play {
+	display: block;
+	width: 32px;
+	height: 20px;
+	position: absolute;
+	left: 25px;
+	bottom: 20px;
+	border: 2px solid #fff;
+	border-radius: 12px;
+	text-align: center;
+	line-height: 20px;
+	transition: background-color 0.2s linear;
+}
+.idx-containner .idx-video .item .pic i {
+	color: #fff;
+}
+.idx-containner .idx-video .item h3 {
+	font-size: 14px;
+}
+/*******************************************5.4.2首页视频弹窗布局css样式**********************************************************/
+.idx-video-bg {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.idx-video-box {
+	display: none;
+	width: 880px;
+	height: 596px;
+	position: fixed;
+	left: 50%;
+	margin-left: -440px;
+	top: 50%;
+	margin-top: -288px;
+	background-color: #000;
+	box-shadow: 0 18px 30px rgba(0, 0, 0, 0.18);
+	outline: none;
+	z-index: 1010;
+}
+.idx-video-box .title {
+	height: 50px;
+	background: #f5f5f5;
+	padding: 0 20px;
+}
+.idx-video-box .title span {
+	font-size: 16px;
+	line-height: 50px;
+	color: #424242;
+}
+.idx-video-box .title .close {
+	float: right;
+	margin-top: 13px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	/* 控制close内部图标位置 */
+	font-size: 14px;
+	text-align: center;
+	line-height: 25px;
+	cursor: pointer;
+	transition: all 0.1s linear
+}
+.idx-video-box .title .close:hover {
+	color: #fff;
+	background-color: #e53935;
+}
+.idx-video-box .video-box {
+	position: relative;
+}
+/* .idx-video-box .video-box .play-btn {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	margin-left: -25px;
+	color: white;
+	font-size: 50px;
+	z-index: 1000;
+	cursor: pointer;
+} */
+.idx-video-box .video-box video {
+	height: 536px;
+	width: 880px;
+}
+
+
+
+

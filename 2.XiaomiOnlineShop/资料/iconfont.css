@@ -1,0 +1,27 @@
+/* 自定义一个新的字体类型 */
+@font-face {
+  font-family: "iconfont";/* 定义字体名称 */
+  /* 读取其他字体文件 */
+  src: url('iconfont.woff2?t=1624529031005') format('woff2'),
+       url('iconfont.woff?t=1624529031005') format('woff'),
+       url('iconfont.ttf?t=1624529031005') format('truetype');
+}
+/* 定义一个class选择器 */
+.iconfont {
+	/* 设置权重为最高 */
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  /* 兼容的写法 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* 插入伪类选择器向右 */
+.icon-xiangyou:before {
+  content: "\e68b";
+}
+/* 插入伪类选择器用户 */
+.icon-yonghu:before {
+  content: "\e618";
+}
+
